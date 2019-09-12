@@ -1,4 +1,4 @@
-#Adjust API
+## Adjust API
 Django API - Adjust data set
 
 A single API endpoint - '/api/v1/metrics/' to handle all client requests for adjust dataset.
@@ -10,9 +10,9 @@ Operations supported:
     * Derived metric - CPI
     
 ## Setup and Dependencies
-    -Python3, Django, djangorestframework and default Sqlite.
+    - Python3, Django, djangorestframework and default Sqlite.
     
-    -Steps: 
+    - Steps: 
         1. Clone the repository
         2. pip install -r requirements.txt
     
@@ -64,11 +64,11 @@ Vary: Accept
     .
     .
   ```  
-    2. http://10.169.58.36:8000/api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
-    
-    Sample Output:
-    ```
-    GET /api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
+  
+    2. http://10.169.58.36:8000/api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date    
+       Sample Output:
+
+```GET /api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
 Content-Type: application/json
@@ -93,14 +93,13 @@ Vary: Accept
     },
     .
     .
-    .
-    ```
+    .```
     
     3. http://10.169.58.36:8000/api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
     
     Sampe Output
-    ```
-    GET /api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
+    ```    
+GET /api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
 Content-Type: application/json
@@ -118,9 +117,11 @@ Vary: Accept
 ]
 ```
 
+
 4. http://10.169.58.36:8000/api/v1/metrics/custom?fields=channel&date_from=2017-05-17&date_to=2017-06-01&group_by=channel&sum_fields=cpi,spend&country=CA&sort_by=-cpi
 
 sample output
+
 ```
 GET /api/v1/metrics/custom?fields=channel&date_from=2017-05-17&date_to=2017-06-01&group_by=channel&sum_fields=cpi,spend&country=CA&sort_by=-cpi
 HTTP 200 OK
