@@ -10,9 +10,9 @@ Operations supported:
     * Derived metric - CPI
     
 ## Setup and Dependencies
-    - Python3, Django, djangorestframework and default Sqlite.
+    -Python3, Django, djangorestframework and default Sqlite.
     
-    - Steps: 
+    -Steps: 
         1. Clone the repository
         2. pip install -r requirements.txt
     
@@ -20,7 +20,7 @@ Operations supported:
         ~/adjust$ python manage.py runserver 0.0.0.0:8000
         
         Use browser and submit requests:
-        * Parameters:
+        *Parameters:
             fields:     A comma separated list of column names to be returned
             date_from:  date based filtering, start of the range(eg.2017-05-21)
             date_to:    date based filtering, End of the range
@@ -34,7 +34,7 @@ Operations supported:
             1. http://localhost:8000/api/v1/metrics/custom?fields=channel,country&date_to=2017-06-1&group_by=channel,country&sum_fields=impressions,clicks&sort_by=-clicks
             
 Sample Output:
-            
+```            
 GET /api/v1/metrics/custom?fields=channel,country&date_to=2017-06-1&group_by=channel,country&sum_fields=impressions,clicks&sort_by=-clicks
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
@@ -63,7 +63,7 @@ Vary: Accept
     .
     .
     .
-    
+  ```  
     
     
     
