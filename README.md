@@ -64,7 +64,94 @@ Vary: Accept
     .
     .
   ```  
+    2. http://10.169.58.36:8000/api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
     
+    Sample Output:
+    ```
+    GET /api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "date": "2017-05-17",
+        "aggr_installs": 755
+    },
+    {
+        "date": "2017-05-18",
+        "aggr_installs": 765
+    },
+    {
+        "date": "2017-05-19",
+        "aggr_installs": 745
+    },
+    {
+        "date": "2017-05-20",
+        "aggr_installs": 816
+    },
+    .
+    .
+    .
+    ```
+    
+    3. http://10.169.58.36:8000/api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
+    
+    Sampe Output
+    ```
+    GET /api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "os": "ios",
+        "aggr_revenue": 398.87
+    },
+    {
+        "os": "android",
+        "aggr_revenue": 1205.21
+    }
+]
+```
+
+4. http://10.169.58.36:8000/api/v1/metrics/custom?fields=channel&date_from=2017-05-17&date_to=2017-06-01&group_by=channel&sum_fields=cpi,spend&country=CA&sort_by=-cpi
+
+sample output
+```
+GET /api/v1/metrics/custom?fields=channel&date_from=2017-05-17&date_to=2017-06-01&group_by=channel&sum_fields=cpi,spend&country=CA&sort_by=-cpi
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "channel": "unityads",
+        "aggr_cpi": 48.0,
+        "aggr_spend": 1388.0
+    },
+    {
+        "channel": "facebook",
+        "aggr_cpi": 34.67499126776217,
+        "aggr_spend": 619.1999999999999
+    },
+    {
+        "channel": "chartboost",
+        "aggr_cpi": 32.0,
+        "aggr_spend": 688.0
+    },
+    {
+        "channel": "google",
+        "aggr_cpi": 30.360337683252837,
+        "aggr_spend": 533.2799999999999
+    }
+]
+```
+
     
     
     
