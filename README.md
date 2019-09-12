@@ -65,10 +65,13 @@ Vary: Accept
     .
   ```  
   
-    2. http://10.169.58.36:8000/api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date    
-       Sample Output:
-
-```GET /api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
+  
+  
+   2. http://10.169.58.36:8000/api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date    
+      
+   Sample Output:
+```
+GET /api/v1/metrics/custom?fields=date&date_from=2017-05-2&date_to=2017-05-31&group_by=date&sum_fields=installs&os=ios&sort_by=date
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
 Content-Type: application/json
@@ -93,11 +96,13 @@ Vary: Accept
     },
     .
     .
-    .```
+    .
+    
+    ``` 
     
     3. http://10.169.58.36:8000/api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
     
-    Sampe Output
+   Sampe Output
     ```    
 GET /api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
 HTTP 200 OK
