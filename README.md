@@ -20,20 +20,20 @@ Operations supported:
         ~/adjust$ python manage.py runserver 0.0.0.0:8000
         
         Use browser and submit requests:
-        *Parameters:
+        * Parameters:
             fields:     A comma separated list of column names to be returned
             date_from:  date based filtering, start of the range(eg.2017-05-21)
             date_to:    date based filtering, End of the range
             group_by:   Comma separated list of column names to group
             sum_fields: Comma separated list of column names to aggregate over
-            sort_by:    Comma separated list of comuns names for sorting. Precede with - for descending(e.g: -spend)
-            
+            sort_by:    Comma separated list of comuns names for sorting. Precede with - for descending(e.g: -spend)            
             any valid "column=value" can be given for filtering as well
             
-            Example Requests:
-            1. http://localhost:8000/api/v1/metrics/custom?fields=channel,country&date_to=2017-06-1&group_by=channel,country&sum_fields=impressions,clicks&sort_by=-clicks
+* Example Requests:
+1. http://localhost:8000/api/v1/metrics/custom?fields=channel,country&date_to=2017-06-1&group_by=channel,country&sum_fields=impressions,clicks&sort_by=-clicks
             
 Sample Output:
+
 ```            
 GET /api/v1/metrics/custom?fields=channel,country&date_to=2017-06-1&group_by=channel,country&sum_fields=impressions,clicks&sort_by=-clicks
 HTTP 200 OK
@@ -98,12 +98,14 @@ Vary: Accept
     .
     .
     
-    ``` 
+```
+
     
-    3. http://10.169.58.36:8000/api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
+3. http://10.169.58.36:8000/api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
     
    Sampe Output
-    ```    
+    
+```
 GET /api/v1/metrics/custom?fields=os&date_from=2017-06-01&date_to=2017-06-01&group_by=os&sum_fields=revenue&sort_by=revenue&country=US
 HTTP 200 OK
 Allow: GET, HEAD, OPTIONS
@@ -121,6 +123,7 @@ Vary: Accept
     }
 ]
 ```
+
 
 
 4. http://10.169.58.36:8000/api/v1/metrics/custom?fields=channel&date_from=2017-05-17&date_to=2017-06-01&group_by=channel&sum_fields=cpi,spend&country=CA&sort_by=-cpi
