@@ -27,7 +27,7 @@ Use browser and submit requests:
       3. date_to:    date based filtering, End of the range
       4. group_by:   Comma separated list of column names to group
       5. sum_fields: Comma separated list of column names to aggregate over
-      6. sort_by:    Comma separated list of comuns names for sorting. Precede with - for descending(e.g: -spend)            
+      6. sort_by:    Comma separated list of columns names for sorting. Precede with - for descending(e.g: -spend)            
       any valid "column=value" can be given for filtering as well
    
             
